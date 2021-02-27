@@ -19,4 +19,10 @@ export default class RestAPIService {
   static async findAccountById(_id) {
     return RestAPIService.#DB_SERVICE.findAccountById(_id);
   }
+
+  static async deleteAccountById(_id) {
+    return RestAPIService.#DB_SERVICE.findAccountById(_id) && RestAPIService.#DB_SERVICE.deleteAccount(_account);
+    
+    
+  }
 }
